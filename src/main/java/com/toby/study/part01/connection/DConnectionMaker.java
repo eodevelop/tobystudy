@@ -1,4 +1,4 @@
-package com.toby.study.part01;
+package com.toby.study.part01.connection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

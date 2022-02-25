@@ -1,9 +1,12 @@
-package com.toby.study.part01;
+package com.toby.study.part01.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import com.toby.study.part01.connection.ConnectionMaker;
+import com.toby.study.part01.model.User;
 
 public class UserDao {
 	private ConnectionMaker connectionMaker;

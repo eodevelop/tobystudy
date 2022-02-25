@@ -1,4 +1,4 @@
-package com.toby.study.part01;
+package com.toby.study.part01.model;
 
 public class User {
 	private String id;
