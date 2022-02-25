@@ -5,35 +5,20 @@ import java.sql.SQLException;
 public class Main {
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
-		NUserDao nDao = new NUserDao();
-		DUserDao dDao = new DUserDao();
+		UserDao dao = new UserDao();
 		
-		User nUser = new User();
-		nUser.setId("whiteship");
-		nUser.setName("백기선");
-		nUser.setPassword("married");
+		User user = new User();
+		user.setId("whiteship");
+		user.setName("백기선");
+		user.setPassword("married");
 		
-		nDao.add(nUser);
+		dao.add(user);
 		
-		System.out.println(nUser.getId() + " 등록 성공");
+		System.out.println(user.getId() + " 등록 성공");
 		
-		User nUser2 = nDao.get(nUser.getId());
-		System.out.println(nUser2.getName());
-		System.out.println(nUser2.getPassword());
-		System.out.println(nUser2.getId() + " 조회 성공");
-		
-		User dUser = new User();
-		dUser.setId("whiteship1");
-		dUser.setName("백기선1");
-		dUser.setPassword("married1");
-		
-		dDao.add(dUser);
-		
-		System.out.println(dUser.getId() + " 등록 성공");
-		
-		User dUser2 = dDao.get(dUser.getId());
-		System.out.println(dUser2.getName());
-		System.out.println(dUser2.getPassword());
-		System.out.println(dUser2.getId() + " 조회 성공");
+		User user2 = dao.get(user.getId());
+		System.out.println(user2.getName());
+		System.out.println(user2.getPassword());
+		System.out.println(user2.getId() + " 조회 성공");
 	}
 }
